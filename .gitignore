@@ -3,3 +3,4 @@
 /src/playground
 yarn-error.log
 .env.development
+.env.test
