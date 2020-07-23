@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render AddOption correctly 1`] = `
+<div>
+  <form
+    className="add-option"
+    onSubmit={[Function]}
+  >
+    <input
+      className="add-option__input"
+      name="option"
+      type="text"
+    />
+    <button
+      className="button"
+    >
+      Add Option
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Should render error on empty form submission 1`] = `
+<div>
+  <form
+    className="add-option"
+    onSubmit={[Function]}
+  >
+    <input
+      className="add-option__input"
+      name="option"
+      type="text"
+    />
+    <button
+      className="button"
+    >
+      Add Option
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Should render error on empty form submission 2`] = `
+<div>
+  <p
+    className="add-option-error"
+  >
+    Enter a valid value to add item
+  </p>
+  <form
+    className="add-option"
+    onSubmit={[Function]}
+  >
+    <input
+      className="add-option__input"
+      name="option"
+      type="text"
+    />
+    <button
+      className="button"
+    >
+      Add Option
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Should render error on existing option on form submit 1`] = `
+<div>
+  <form
+    className="add-option"
+    onSubmit={[Function]}
+  >
+    <input
+      className="add-option__input"
+      name="option"
+      type="text"
+    />
+    <button
+      className="button"
+    >
+      Add Option
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Should render error on existing option on form submit 2`] = `
+<div>
+  <p
+    className="add-option-error"
+  >
+    This option already exists
+  </p>
+  <form
+    className="add-option"
+    onSubmit={[Function]}
+  >
+    <input
+      className="add-option__input"
+      name="option"
+      type="text"
+    />
+    <button
+      className="button"
+    >
+      Add Option
+    </button>
+  </form>
+</div>
+`;

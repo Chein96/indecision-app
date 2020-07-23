@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Options correctly 1`] = `
+<div>
+  <div
+    className="widget-header"
+  >
+    <h3
+      className="widget-header__title"
+    >
+      Your Options
+    </h3>
+    <button
+      className="button button--link"
+      onClick={[Function]}
+    >
+      Remove All
+    </button>
+  </div>
+  <Connect(Option)
+    count={1}
+    key="1"
+    option={
+      Object {
+        "description": "Buy milk",
+        "id": "1",
+      }
+    }
+  />
+  <Connect(Option)
+    count={2}
+    key="2"
+    option={
+      Object {
+        "description": "Clean the house",
+        "id": "2",
+      }
+    }
+  />
+  <Connect(Option)
+    count={3}
+    key="3"
+    option={
+      Object {
+        "description": "Do math essay",
+        "id": "3",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Should render Options with no options correctly 1`] = `
+<div>
+  <div
+    className="widget-header"
+  >
+    <h3
+      className="widget-header__title"
+    >
+      Your Options
+    </h3>
+    <button
+      className="button button--link"
+      onClick={[Function]}
+    >
+      Remove All
+    </button>
+  </div>
+  <p
+    className="widget__message"
+  >
+    Please add an option to get started!
+  </p>
+</div>
+`;

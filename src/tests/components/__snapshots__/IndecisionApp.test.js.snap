@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render IndecisionApp correclty when user logged in 1`] = `
+<div>
+  <Connect(Header) />
+  <div
+    className="container"
+  >
+    <Connect(Action)
+      handlePick={[Function]}
+    />
+    <div
+      className="widget"
+    >
+      <Connect(Options) />
+      <Connect(AddOption) />
+    </div>
+  </div>
+  <OptionModal
+    handleClearSelectedOption={[Function]}
+  />
+</div>
+`;
+
+exports[`Should render IndecisionApp-login correctly when no user 1`] = `<Connect(Login) />`;

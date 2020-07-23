@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Option correctly 1`] = `
+<div
+  className="option"
+>
+  <p
+    className="option__text"
+  >
+    1
+    . 
+    Buy milk
+  </p>
+  <button
+    className="button button--link"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

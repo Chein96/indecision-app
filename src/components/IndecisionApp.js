@@ -7,7 +7,7 @@ import Login from './Login';
 import OptionModal from './OptionModal';
 import Options from './Options';
 
-class IndecisionApp extends React.Component {
+export class IndecisionApp extends React.Component {
     state = {
         selectedOption: undefined
     };
