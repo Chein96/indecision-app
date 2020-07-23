@@ -1,12 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { startRemoveOption } from '../actions/options';
 
-const Option = (props) => (
+export const Option = ({ option, count, startRemoveOption }) => (
     <div className="option">
-        <p className="option__text">{props.count}. {props.optionText}</p>
+        <p className="option__text">{count}. {option.description}</p>
         <button
             className="button button--link"
             onClick={
-                () => props.handleDeleteOption(props.optionText)
+                () => startRemoveOption({ id: option.id })
             }
         >
             Remove
@@ -14,4 +16,8 @@ const Option = (props) => (
     </div>
 );
 
-export default Option;
+const mapDispatchToProps = (dispatch) => ({
+    startRemoveOption: ({ id }) => dispatch(startRemoveOption({ id }))
+});
+
+export default connect(undefined, mapDispatchToProps)(Option);

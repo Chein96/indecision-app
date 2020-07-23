@@ -5,6 +5,12 @@
     padding: $m-size 0;
 }
 
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header__title {
     font-size: $l-size;
     margin: 0;
@@ -12,6 +18,7 @@
 
 .header__subtitle {
     color: $off-white;
+    display: none;
     font-size: $m-size;
     font-weight: 500;
     margin: 0;
@@ -20,5 +27,9 @@
 @media (min-width: $desktop-breakpoint) {
     .header {
         margin-bottom: $xl-size;
+    }
+
+    .header__subtitle {
+        display: block;
     }
 }

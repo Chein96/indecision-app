@@ -1,32 +1,41 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { startRemoveAllOptions } from '../actions/options';
 import Option from './Option';
 
-const Options = (props) => (
+export const Options = ({ options, startRemoveAllOptions }) => (
     <div>
         <div className="widget-header">
             <h3 className="widget-header__title">Your Options</h3>
             <button 
                 className="button button--link"
-                onClick={props.handleDeleteOptions}
+                onClick={startRemoveAllOptions}
             >
                 Remove All
             </button>
         </div>
         {
-            props.options.length === 0 
+            options.length === 0 
             && 
             <p className="widget__message">Please add an option to get started!</p> }
         {
-            props.options.map((option, index) => (
+            options.map(({ id, description }, index) => (
                 <Option
-                    key={option}
-                    optionText={option}
+                    key={id}
+                    option={{ id, description }}
                     count={index + 1}
-                    handleDeleteOption={props.handleDeleteOption}
                 />
             ))
         }
     </div>
 );
 
-export default Options;
+const mapStateToProps = ({ options }) => ({
+    options
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    startRemoveAllOptions: () => dispatch(startRemoveAllOptions())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Options);

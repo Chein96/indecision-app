@@ -1,19 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { startAddOption } from '../actions/options';
+import optionExists from '../selectors/options';
 
-class AddOption extends React.Component {
+export class AddOption extends React.Component {
     state = {
         error: undefined
     }
 
     handleAddOption = (e) => {
         e.preventDefault();
-        const option = e.target.elements.option.value.trim();
-        const error = this.props.handleAddOption(option);
+        const description = e.target.elements.option.value.trim();
 
-        this.setState(()=>({error}));
-        
-        if(!error){
+        if(description === ''){
+            this.setState(() => ({ error: 'Enter a valid value to add item' }));
+        }
+        else if(optionExists(this.props.options, description)){
+            this.setState(() => ({ error: 'This option already exists' }));
+        }
+        else {
+            const option = { description };
+            this.props.startAddOption(option);
             e.target.elements.option.value = '';
+            this.setState(()=>({error: undefined}));
         }
     }
 
@@ -34,4 +43,12 @@ class AddOption extends React.Component {
     }
 };
 
-export default AddOption;
+const mapStateToProps = ({ options }) => ({
+    options
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    startAddOption: (option) => dispatch(startAddOption(option))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddOption);
