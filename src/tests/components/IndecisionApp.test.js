@@ -20,11 +20,11 @@ test('Should render IndecisionApp correclty when user logged in', () => {
 
 test('Should handle handlePick', () => {
     wrapper.find('Connect(Action)').prop('handlePick')();
-    expect(wrapper.state('selectedOption').length).toBeGreaterThan(0);
+    expect(wrapper.find('OptionModal').prop('selectedOption').length).toBeGreaterThan(0);
 });
 
 test('Should handle handleClearSelectedOption', () => {
     wrapper.find('Connect(Action)').prop('handlePick')();
     wrapper.find('OptionModal').prop('handleClearSelectedOption')();
-    expect(wrapper.state('selectedOption')).toBeFalsy();
+    expect(wrapper.find('OptionModal').prop('selectedOption')).toBeUndefined();
 });

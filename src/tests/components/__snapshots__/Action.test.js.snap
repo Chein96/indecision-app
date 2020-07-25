@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render Action correctly 1`] = `
-<div>
+<Fragment>
   <button
     className="big-button"
     disabled={true}
@@ -9,5 +9,5 @@ exports[`Should render Action correctly 1`] = `
   >
     What should I do?
   </button>
-</div>
+</Fragment>
 `;

@@ -25,7 +25,7 @@ test('Should render error on empty form submission', () => {
             }
         }
     });
-    expect(wrapper.state('error').length).toBeGreaterThan(0);
+    expect(wrapper.find('p.add-option-error').length).toBeGreaterThan(0);
     expect(wrapper).toMatchSnapshot();
 });
 
@@ -41,7 +41,7 @@ test('Should render error on existing option on form submit', () => {
             }
         }
     });
-    expect(wrapper.state('error').length).toBeGreaterThan(0);
+    expect(wrapper.find('p.add-option-error').length).toBeGreaterThan(0);
     expect(wrapper).toMatchSnapshot();
 });
 
@@ -57,6 +57,6 @@ test('Should call startAddOption on successful form submission', () => {
             }
         }
     });
-    expect(wrapper.state('error')).toBeFalsy();
+    expect(wrapper.find('p.add-option-error').length).toBeLessThan(1);
     expect(startAddOption).toHaveBeenCalledWith({ description });
 });

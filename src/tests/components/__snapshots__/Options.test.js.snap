@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render Options correctly 1`] = `
-<div>
+<Fragment>
   <div
     className="widget-header"
   >
@@ -47,11 +47,11 @@ exports[`Should render Options correctly 1`] = `
       }
     }
   />
-</div>
+</Fragment>
 `;
 
 exports[`Should render Options with no options correctly 1`] = `
-<div>
+<Fragment>
   <div
     className="widget-header"
   >
@@ -72,5 +72,5 @@ exports[`Should render Options with no options correctly 1`] = `
   >
     Please add an option to get started!
   </p>
-</div>
+</Fragment>
 `;

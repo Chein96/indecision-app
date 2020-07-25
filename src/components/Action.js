@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 
 export const Action = ({ handlePick, hasOptions }) => (
-    <div>
+    <Fragment>
         <button
             className="big-button"
             disabled={!hasOptions}
@@ -10,7 +10,7 @@ export const Action = ({ handlePick, hasOptions }) => (
         >
             What should I do?
         </button>
-    </div>
+    </Fragment>
 );
 
 const mapStateToProps = ({ options }) => ({

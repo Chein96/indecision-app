@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import Modal from 'react-modal';
 import IndecisionApp from './components/IndecisionApp';
+import LoadingPage from './components/LoadingPage';
 import configureStore from './store/configureStore';
 import { login, logout } from './actions/auth';
 import { startSetOptions } from './actions/options';
@@ -26,7 +27,7 @@ const renderApp = () => {
     }
 }
 
-ReactDOM.render(<div>Loading...</div>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if(user){

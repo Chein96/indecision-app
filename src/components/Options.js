@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { startRemoveAllOptions } from '../actions/options';
 import Option from './Option';
 
 export const Options = ({ options, startRemoveAllOptions }) => (
-    <div>
+    <Fragment>
         <div className="widget-header">
             <h3 className="widget-header__title">Your Options</h3>
             <button 
@@ -27,7 +27,7 @@ export const Options = ({ options, startRemoveAllOptions }) => (
                 />
             ))
         }
-    </div>
+    </Fragment>
 );
 
 const mapStateToProps = ({ options }) => ({
